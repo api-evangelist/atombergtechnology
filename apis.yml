@@ -1,23 +1,90 @@
 aid: atombergtechnology
+
 name: Atombergtechnology
-description: 'Atombergtechnology is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+image: http://atomberg.com/cdn/shop/files/Atomberg-logo_1.svg?v=1786346457
+
+description: Atomberg is an Indian smart home appliance brand offering energy‑efficient ceiling fans, mixer grinders, water purifiers, juicers
+  and smart locks. Founded with a focus on cutting‑edge technology and design, the company emphasizes low power consumption, durability and modern
+  aesthetics for contemporary homes. Their product line integrates IoT features and aims to provide sustainable solutions for everyday living,
+  serving customers across India and expanding globally.
+
 url: https://raw.githubusercontent.com/api-evangelist/atombergtechnology/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- SmartHome
+- Appliances
+- India
+- EnergyEfficient
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/atombergtechnology-llms.txt
+- type: WellKnown
+  url: well-known/atombergtechnology-well-known.yml
+- type: Hosts
+  url: hosts/atombergtechnology-hosts.yml
+- type: Vendors
+  url: vendors/atombergtechnology-vendors.yml
+- type: Newsroom
+  url: https://media-dev.atomberg.com/media/pdf/Atomberg-Code-of-Conduct.pdf?v=10
+- type: DeveloperPortal
+  url: https://dev.atomberg.com/
+- type: DomainSecurity
+  url: security/atombergtechnology-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/atombergtechnology
+  url: https://atomberg.com
+- type: Documentation
+  url: https://atomberg.com/pages/about-us
+- type: Support
+  url: https://atomberg.com/pages/support
+- type: TermsOfService
+  url: https://atomberg.com/pages/terms-conditions
+- type: PrivacyPolicy
+  url: https://atomberg.com/pages/customer-policy
+- type: Blog
+  url: https://atomberg.com/blogs/blog
+
+apis:
+- name: Atomberg API
+  description: Developer portal for Atomberg's smart home appliance APIs.
+  humanURL: https://dev.atomberg.com/
+  baseURL: null
+  aid: atombergtechnology:atomberg-api
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: Only GraphQL endpoint discovered; no OpenAPI or other machine-readable contract found.
+  evidence:
+  - url: https://api.atomberg.com/openapi.json
+    status: 0
+  - url: https://dev.atomberg.com/openapi.json
+    status: 404
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 12
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local

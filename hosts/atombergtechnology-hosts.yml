@@ -1,0 +1,134 @@
+generated: '2026-09-26'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 10
+  own: 7
+  other_domain: 2
+  platform: 1
+  roles:
+  - api
+  - identity
+  - other
+  - portal
+  - website
+hosts:
+- host: account.atomberg.com
+  found_by:
+  - well-known
+  types: []
+  serves: []
+  platform: shopify.com
+  registrable_domain: atomberg.com
+  role: identity
+  relation: own
+- host: admin-dev.atomberg.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: atomberg.com
+  role: other
+  relation: own
+- host: api.atomberg.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: atomberg.com
+  role: api
+  relation: own
+- host: atomberg.com
+  found_by:
+  - pointer
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Documentation
+  - Support
+  - TermsOfService
+  - PrivacyPolicy
+  - Blog
+  serves:
+  - docs
+  - cdn
+  - hosting
+  platform: shopify.com
+  vendor: cloudflare
+  registrable_domain: atomberg.com
+  role: website
+  relation: own
+- host: dev.atomberg.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: atomberg.com
+  role: portal
+  relation: own
+- host: internal.store.atomberg.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  platform: shopify.com
+  registrable_domain: atomberg.com
+  role: other
+  relation: own
+- host: media-dev.atomberg.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  serves: []
+  registrable_domain: atomberg.com
+  role: other
+  relation: own
+- host: shop.app
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: shop.app
+  role: other
+  relation: other-domain
+- host: ucp.dev
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: ucp.dev
+  role: other
+  relation: other-domain
+- host: www.shopify.com
+  found_by:
+  - docs-index
+  types: []
+  serves:
+  - docs
+  registrable_domain: shopify.com
+  role: other
+  relation: platform
